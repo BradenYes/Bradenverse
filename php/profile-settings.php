@@ -156,7 +156,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <li class="setting-profile-comment">
                         <p class="settings-label">Profile Comment</p>
                         <textarea id="profile-text" class="textarea" name="profile_comment" maxlength="2000" placeholder="Write about yourself here."><?=htmlspecialchars($row['profile_comment'])?></textarea>
-                        <p class="note">What you write here will appear on your profile. Feel free to write anything that doesn't violate <a href="/info/rules">Galaxy Plaza's rules</a>.</p>
+                        <p class="note">What you write here will appear on your profile. Feel free to write anything that doesn't violate <a href="/info/rules">Bradenverse's rules</a>.</p>
                     </li>
                     <li class="setting-profile-post">
                         <p class="settings-label">Favorite Post</p>
@@ -184,7 +184,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 					<li>
                         <p class="settings-label">Site Theme</p>
                         <label><input type="radio" name="site_theme" value="0"<?=$row['site_theme'] === 0 ? ' checked' : ''?>> Default</label>
-                        <label><input type="radio" name="site_theme" value="1"<?=$row['site_theme'] === 1 ? ' checked' : ''?>> Dark</label>
+                        <label><input type="radio" name="site_theme" value="1"<?=$row['site_theme'] === 1 ? ' checked' : ''?>> Cedar 2</label>
                     </li>
                 </ul>
                 <div class="form-buttons">

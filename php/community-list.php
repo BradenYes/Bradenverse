@@ -103,7 +103,7 @@ if(empty($_SESSION['username'])) { ?>
             <input type="text" name="query" placeholder="Search" maxlength="255"><input type="submit" value="q" title="Search">
         </form>
                 <div id="identified-user-banner">
-            <a href="/communities/7" data-pjax="#body" class="list-button us">
+            <a href="/communities/1" data-pjax="#body" class="list-button us">
                 <span class="title">Get the latest news!</span>
                 <span class="text">Get updates from verified users</span>
             </a>
@@ -172,6 +172,7 @@ if(empty($_SESSION['username'])) { ?>
                 <!--<a href="https://github.com/PF2M/MiiverseWorld" class="arrow-button"><span>GitHub</span></a>-->
                 <a href="/info/rules" class="arrow-button"><span>Site Rules</span></a>
                 <a href="/info/contact" class="arrow-button"><span>Contact Us</span></a>
+                <a href="https://discord.gg/tPj5TDta2J" class="arrow-button"><span>The Official Bradenverse Discord Server</span></a>
             </div>
         </div>
     </div>

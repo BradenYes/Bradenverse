@@ -11,14 +11,14 @@ require_once('connect.php');
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 		<meta name="theme-color" content="#9900ff" />
         <meta name="apple-mobile-web-app-title" content="<?php print(SITE_NAME); ?>">
-        <meta name="description" content="Galaxy Plaza is a service that lets you communicate with other users from around the world.">
+        <meta name="description" content="Bradenverse is a service that lets you communicate with other users from around the world.">
         <meta name="keywords" content="Miiverse,clone,Galaxy,Plaza,GalaxyPlaza">
         <meta property="og:locale" content="en_US">
-        <meta property="og:title" content="<?=isset($title) ? htmlspecialchars($title) . ' - ' : ''?>Galaxy Plaza">
+        <meta property="og:title" content="<?=isset($title) ? htmlspecialchars($title) . ' - ' : ''?>Bradenverse">
         <meta property="og:type" content="article">
         <meta property="og:url" content="http<?=($_SERVER['HTTPS'] || HTTPS_PROXY) ? 's' : ''?>://<?=$_SERVER['SERVER_NAME']?>">
-        <meta property="og:description" content="Galaxy Plaza is a service that lets you communicate with other users from around the world.">
-        <meta property="og:site_name" content="Galaxy Plaza">
+        <meta property="og:description" content="Bradenverse is a service that lets you communicate with other users from around the world.">
+        <meta property="og:site_name" content="Bradenverse">
         <meta name="twitter:card" content="summary">
         <meta name="twitter:domain" content="<?=$_SERVER['SERVER_NAME']?>">
         <link rel="shortcut icon" href="/assets/img/favicon.ico">
@@ -75,7 +75,7 @@ require_once('connect.php');
             <div id="sub-body">
                 <menu id="global-menu">
                     <li id="global-menu-logo">
-                        <h1><a href="/"><img src="/assets/img/menu-logo.png" alt="Galaxy Plaza" width="797" height="201"></a></h1>
+                        <h1><a href="/"><img src="/assets/img/menu-logo.png" alt="Bradenverse" width="165" height="30"></a></h1>
                     </li>
                     <?php if(empty($_SESSION['username'])) { ?><li id="global-menu-login">
                             <form id="login_form" action="/login" method="post">
@@ -100,6 +100,11 @@ require_once('connect.php');
 							<li id="global-menu-community"<?php if(!empty($selected) && $selected == 'community') echo ' class="selected"'; ?>>
                                 <a href="/communities" class="symbol">
                                     <span>Communities</span>
+                                </a>
+                            </li>
+                            <li id="global-menu-homepage"<?php if(!empty($selected) && $selected == 'recommended') echo ' class="selected"'; ?>>
+                                <a href="/discover" class="symbol">
+                                    <span>Recommended</span>
                                 </a>
                             </li>
 							<li id="global-menu-message"<?php if(!empty($selected) && $selected == 'message') echo ' class="selected"'; ?>>

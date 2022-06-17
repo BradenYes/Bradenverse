@@ -25,7 +25,7 @@
     <p class="user-name"><a href="/users/<?=htmlspecialchars($row['username'])?>"><?=htmlspecialchars($row['nickname'])?></a></p>
     <p class="timestamp-container">
         <a class="timestamp" href="/<?=($row['reply_count'] > -1 ? 'posts/' : 'replies/') . htmlspecialchars($row['id']) . '">' . getTimestamp($row['created_at'])?></a>
-        <span class="spoiler-status<?=$row['sensitive_content'] ? ' spoiler' : ''?>">&#775; <font style="color:red;">NSFW</font></span>
+        <span class="spoiler-status<?=$row['sensitive_content'] ? ' spoiler' : ''?>">&#775; <font style="color:red;">Spoiler</font></span>
     </p>
     <?=!isset($is_profile) ? '<div class="body ' . ($row['reply_count'] > -1 && (!isset($_GET['type']) || $_GET['type'] !== 'empathies') ? 'post' : 'reply') . '-content">' : ''?>
         <?php if(!empty($row['yt'])) { ?>
@@ -42,7 +42,7 @@
         <?php }
         if($row['sensitive_content'] && $row['created_by'] !== $_SESSION['id']) { ?>
             <div class="hidden-content">
-                <p>This <?=$row['reply_count'] !== -1 ? 'post' : 'reply'?> may contain sensitive or NSFW content.</p>
+                <p>This <?=$row['reply_count'] !== -1 ? 'post' : 'reply'?> may contain a spoiler.</p>
                 <button type="button" class="hidden-content-button">View <?=$row['reply_count'] !== -1 ? 'Post' : 'Reply'?></button>
             </div>
         <?php } ?>

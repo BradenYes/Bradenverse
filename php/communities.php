@@ -66,6 +66,7 @@ require_once('inc/header.php');
             } ?>
         </div>
     </section>
+    <div class="adx test-adx"><span class="adx-label">Advertisement</span> <a href="https://sites.google.com/site/mvclonapedia/home"><img src="https://media.discordapp.net/attachments/868681117287448630/983166320155713576/unknown.png" style="/* */height: 118px; */width: 250px;"></a> </div>
     <?php
     if(!empty($_SESSION['username'])) {
         $stmt = $db->prepare('SELECT level FROM community_admins WHERE user = ? AND community = ?');
@@ -119,6 +120,7 @@ require_once('inc/header.php');
                             <textarea name="body" class="textarea-text textarea" maxlength="2000" placeholder="Share your thoughts in a post to this community." data-open-folded-form data-required></textarea>
                         </div>
                     </div>
+                    <input type="text" class="textarea-line url-form" name="url" placeholder="URL" maxlength="255">
                     <details class="select-from-album-button headline">
                         <a class="right" data-modal-open="#about-tags"><strong>Help</strong></a>
                         <div id="about-tags" class="dialog none">
@@ -146,7 +148,7 @@ require_once('inc/header.php');
                     </label>
                     <div class="post-form-footer-options">
                         <div class="post-form-footer-option-inner post-form-spoiler js-post-form-spoiler">
-                            <label class="spoiler-button symbol"><input type="checkbox" name="sensitive_content" value="1"> Sensitive</label>
+                            <label class="spoiler-button symbol"><input type="checkbox" name="sensitive_content" value="1"> Spoiler</label>
                         </div>
                     </div>
                     <div class="form-buttons">
