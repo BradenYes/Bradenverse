@@ -184,7 +184,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 					<li>
                         <p class="settings-label">Site Theme</p>
                         <label><input type="radio" name="site_theme" value="0"<?=$row['site_theme'] === 0 ? ' checked' : ''?>> Default</label>
-                        <label><input type="radio" name="site_theme" value="1"<?=$row['site_theme'] === 1 ? ' checked' : ''?>> Cedar 2</label>
+                        <label><input type="radio" name="site_theme" value="1"<?=$row['site_theme'] === 1 ? ' checked' : ''?>> Shitty Dark theme</label>
                     </li>
                 </ul>
                 <div class="form-buttons">

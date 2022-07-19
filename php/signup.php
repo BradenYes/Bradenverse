@@ -153,11 +153,60 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 		'&flags=m&ip=' . urlencode($ip)
 	);
 	
-    if ($proxy_check === '1')
-	{
-        $error = 'You cannot sign in using a proxy.';
+    // Get IP Address
+$IP_ADDRESS = $_SERVER['REMOTE_ADDR']; # Automatically get IP Address
+
+// Input VPNAPI.IO API Key
+// Create an account to get a free API Key
+// Free API keys has a limit of 1000/requests per a day
+$API_KEY = "6a9a0ac5ef404c3c889d683e303035c6"; // Don't worry about changing this, it'll use my account but i dont give a fuck
+
+// API URL
+$API_URL = 'https://vpnapi.io/api/' . $IP_ADDRESS . '?key=' . $API_KEY;
+
+// Fetch VPNAPI.IO API 
+$proxy_check = file_get_contents($API_URL);
+
+// Decode JSON response
+$proxy_check = json_decode($proxy_check);
+    
+    if($proxy_check->security->vpn == true)
+    {
+        $error = 'You cannot sign up using a VPN.';
         goto showForm;
     }
+        if($proxy_check->security->proxy == true)
+    {
+        $error = 'You cannot sign up using a Proxy.';
+        goto showForm;
+    }
+        if($proxy_check->security->tor == true)
+    {
+        $error = 'You cannot sign up using a tor exit node.';
+        goto showForm;
+    }
+        if($proxy_check->security->relay == true)
+    {
+        $error = 'You cannot sign up using a Relay.';
+        goto showForm;
+    }
+
+    $api_email = 'lordfrootloops@gmail.com'; //CHANGE THIS OR YOU'LL BAN YOURSELF FROM THE CHECKER NETWORK, it wont work lol
+    $Api_urlII = 'http://check.getipintel.net/check.php?ip=' . $IP_ADDRESS . '&contact=' . $api_email . '&flags=';
+
+    $proxy_checkII = file_get_contents($Api_urlII);
+    $proxy_checkII = json_decode($proxy_checkII);
+
+    if($proxy_checkII > 0.9) // should be good enough for adams shit vpn
+    {
+     $error = 'Suspicious IP Detected.';
+        goto showForm;
+    }
+    //if($proxy_checkII = -5)
+    //{
+    //$error = 'Something went horribly wrong! Contact Braden for assistance.';
+    //    goto showForm;
+    //}
 
     $email = empty($_POST['email']) ? null : $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT);

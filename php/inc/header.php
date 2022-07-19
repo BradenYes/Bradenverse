@@ -101,12 +101,6 @@ require_once('connect.php');
                                 <a href="/communities" class="symbol">
                                     <span>Communities</span>
                                 </a>
-                            </li>
-                            <li id="global-menu-homepage"<?php if(!empty($selected) && $selected == 'recommended') echo ' class="selected"'; ?>>
-                                <a href="/discover" class="symbol">
-                                    <span>Recommended</span>
-                                </a>
-                            </li>
 							<li id="global-menu-message"<?php if(!empty($selected) && $selected == 'message') echo ' class="selected"'; ?>>
                                 <a href="/news/messages" class="symbol">
                                     <span>Messages</span>

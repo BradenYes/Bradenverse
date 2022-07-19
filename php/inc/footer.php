@@ -2,7 +2,7 @@
             <div id="footer">
                 <div id="footer-inner">
                     <div class="link-container">
-                        <p id="copyright"><a href="https://nintendo.com/"><?php print(SITE_NAME); ?> is a nonprofit fan project based on assets from Nintendo and Hatena, and is not affiliated with either company.</a></p>
+                        <p id="copyright"><a href="https://juice.isledelfino.net/"><?php ?> Who reads the footer anyways lmao</a></p>
                     </div>
                 </div>
             </div>

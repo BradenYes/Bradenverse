@@ -103,9 +103,9 @@ if(empty($_SESSION['username'])) { ?>
             <input type="text" name="query" placeholder="Search" maxlength="255"><input type="submit" value="q" title="Search">
         </form>
                 <div id="identified-user-banner">
-            <a href="/communities/1" data-pjax="#body" class="list-button us">
-                <span class="title">Get the latest news!</span>
-                <span class="text">Get updates from verified users</span>
+            <a href="/identified_user_posts" data-pjax="#body" class="list-button us">
+                <span class="title">Posts from Verified Users</span>
+                <span class="text">activity feed but admins</span>
             </a>
         </div>
         <?php
@@ -172,7 +172,7 @@ if(empty($_SESSION['username'])) { ?>
                 <!--<a href="https://github.com/PF2M/MiiverseWorld" class="arrow-button"><span>GitHub</span></a>-->
                 <a href="/info/rules" class="arrow-button"><span>Site Rules</span></a>
                 <a href="/info/contact" class="arrow-button"><span>Contact Us</span></a>
-                <a href="https://discord.gg/tPj5TDta2J" class="arrow-button"><span>The Official Bradenverse Discord Server</span></a>
+                <a href="https://usecedar.ca" class="arrow-button"><span>Cedar Two</span></a>
             </div>
         </div>
     </div>

@@ -66,7 +66,7 @@ require_once('inc/header.php');
             } ?>
         </div>
     </section>
-    <div class="adx test-adx"><span class="adx-label">Advertisement</span> <a href="https://sites.google.com/site/mvclonapedia/home"><img src="https://media.discordapp.net/attachments/868681117287448630/983166320155713576/unknown.png" style="/* */height: 118px; */width: 250px;"></a> </div>
+    <div class="adx test-adx"><span class="adx-label">Advertisement</span> <a href="https://oldverse.isledelfino.net"><img src="https://media.discordapp.net/attachments/868681117287448630/992522991755853894/oldverse_ad.png" style="/* */height: 118px; */width: 250px;"></a> </div>
     <?php
     if(!empty($_SESSION['username'])) {
         $stmt = $db->prepare('SELECT level FROM community_admins WHERE user = ? AND community = ?');
@@ -145,6 +145,7 @@ require_once('inc/header.php');
                         </span>
                         <input accept="image/*" type="file" class="file-button">
                         <input type="hidden" name="image">
+                        <a target="popup" onclick="window.open('../php/draw/index.html','Drawing Tool','width=600,height=700')"><h3 class="community-title symbol hot-artwork-title">Drawing Tool</h3></a>
                     </label>
                     <div class="post-form-footer-options">
                         <div class="post-form-footer-option-inner post-form-spoiler js-post-form-spoiler">
