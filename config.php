@@ -12,9 +12,9 @@ const ALLOW_SIGNUP = true; // Disables signup.
 const SITE_NAME = "Bradenverse";
 
 // Database settings.
-const DB_HOST = 'whiteguy'; // The hostname of your database server. Required.
-const DB_USER = 'oichh'; // The username you'll use to access the database. Required.
-const DB_PASS = ''; // The password you'll use to access the database. Optional.
+const DB_HOST = 'bradenverse.isledelfino.net'; // The hostname of your database server. Required.
+const DB_USER = 'vdd00nqjwxyh'; // The username you'll use to access the database. Required.
+const DB_PASS = 'D86>YMYO]@5l0'; // The password you'll use to access the database. Optional.
 const DB_NAME = 'bradenverse'; // The name of the database. Required.
 
 // Local Image settings.
