@@ -14,6 +14,7 @@ RewriteRule ^communities\/create$ /php/create-community.php [L,NC,QSA]
 RewriteRule ^communities\/([0-9]+)$ /php/communities.php?id=$1 [L,NC,QSA]
 RewriteRule ^communities\/([0-9]+)\/(un)?favorite\.json$ /php/favorite.php?id=$1&un=$2 [L,NC,QSA]
 RewriteRule ^communities\/([0-9]+)\/(join|leave)$ /php/join-community.php?id=$1&action=$2 [L,NC,QSA]
+RewriteRule ^identified_user_posts$ /php/identified_user_posts.php [L,NC,QSA]
 RewriteRule ^posts$ /php/create-post.php [L,NC,QSA]
 ReWriteRule ^messages$ /php/create-message.php [L,NC,QSA]
 RewriteRule ^(posts|replies)\/([0-9]+)$ /php/posts.php?type=$1&id=$2 [L,NC,QSA]
@@ -47,4 +48,3 @@ RewriteRule ^info\/contact$ /php/contact.php [L,NC,QSA]
 
 ErrorDocument 403 /php/403.php
 ErrorDocument 404 /php/404.php
-php_value display_errors 1
